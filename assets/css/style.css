@@ -101,6 +101,10 @@ body,html{
     line-height:32px
 }
 
+p.profile-description {
+    font-size:13px
+}
+
 .text-fs-14{
     font-size:14px
 }
