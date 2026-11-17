@@ -217,12 +217,17 @@ return [
     */
 
     'meta' => [
-        // Meta::name('author', 'Mr. Hyde'),
-        // Meta::name('twitter:creator', '@HydeFramework'),
-        // Meta::name('description', 'My Hyde Blog'),
-        // Meta::name('keywords', 'Static Sites, Blogs, Documentation'),
-        Meta::name('generator', 'HydePHP v'.Hyde\Hyde::version()),
+        Meta::name('author', 'Raphael Stolt'),
+        Meta::name('description', 'Blog by Raphael Stolt'),
+        Meta::name('twitter:card', 'summary_large_image'),
+        Meta::name('twitter:creator', '@raphaelstolt'),
+        Meta::name('twitter:image', env('SITE_URL', 'https://raphaelstolt.github.io/blog').'/media/images/og-image.png'),
         Meta::property('site_name', env('SITE_NAME', 'Raphael Stolt')),
+        Meta::property('type', 'website'),
+        Meta::property('locale', 'en_US'),
+        Meta::property('url', env('SITE_URL', 'https://raphaelstolt.github.io/blog')),
+        Meta::property('title', env('SITE_NAME', 'Raphael Stolt')),
+        Meta::property('image', env('SITE_URL', 'https://raphaelstolt.github.io/blog').'/media/images/og-image.png'),
     ],
 
     /*
