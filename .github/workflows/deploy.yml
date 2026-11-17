@@ -1,0 +1,61 @@
+name: Build Blog
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          tools: composer
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install PHP dependencies
+        run: |
+          cd _blog
+          composer install --no-interaction --no-progress --no-suggest --prefer-dist --optimize-autoloader
+
+      - name: Install Node dependencies
+        run: |
+          cd _blog
+          npm ci
+
+      - name: Build CSS
+        run: |
+          cd _blog
+          npm run build
+
+      - name: Build site
+        run: |
+          cd _blog
+          php hyde build
+
+      - name: Copy blog to blog folder
+        run: |
+          rm -rf blog
+          cp -r _blog/_site blog
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add blog/
+          git diff --staged --quiet || git commit -m "Auto-build blog [skip ci]"
+          git push || true
