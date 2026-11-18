@@ -1,5 +1,10 @@
+# Hyde build and dependency artifacts
 _blog/vendor
 _blog/node_modules
 _blog/.env
 _blog/_site
 _blog/_media/app.css
+
+# Local build assemble directories
+_dist/
+blog/

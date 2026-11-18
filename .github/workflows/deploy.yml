@@ -1,4 +1,4 @@
-name: Build Blog
+name: Deploy Site to GitHub Pages
 
 on:
   push:
@@ -7,7 +7,13 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: 'pages'
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -30,7 +36,7 @@ jobs:
       - name: Install PHP dependencies
         run: |
           cd _blog
-          composer install --no-interaction --no-progress --no-suggest --prefer-dist --optimize-autoloader
+          composer install --no-interaction --no-progress --prefer-dist --optimize-autoloader
 
       - name: Install Node dependencies
         run: |
@@ -42,20 +48,31 @@ jobs:
           cd _blog
           npm run build
 
-      - name: Build site
+      - name: Build Hyde site
         run: |
           cd _blog
           php hyde build
 
-      - name: Copy blog to blog folder
+      - name: Assemble deployment bundle
         run: |
-          rm -rf blog
-          cp -r _blog/_site blog
+          mkdir -p _dist/blog
+          touch _dist/.nojekyll
+          cp index.html _dist/
+          cp -r assets _dist/
+          cp -r _blog/_site/* _dist/blog/
 
-      - name: Commit and push changes
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add blog/
-          git diff --staged --quiet || git commit -m "Auto-build blog [skip ci]"
-          git push || true
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _dist
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
