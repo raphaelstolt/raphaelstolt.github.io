@@ -5,9 +5,7 @@ author: raphaelstolt
 date: '2026-11-17 14:00'
 ---
 
-# Two ways to integration-test a symfony/console command with Pest
-
-When a PHP CLI application is built with Symfony Console, you can test its commands without starting a separate shell process. Pest provides the test structure: each `it()` closure is a test case, and its `expect()` function makes assertions. Within that structure, you can use Symfony's built-in testers or Zenstruck's `console-test` package.
+When a PHP CLI application is built with Symfony Console, you can test its commands without starting a separate shell process. Pest provides the test structure: each `it()` closure is a test case, and its `expect()` function makes assertions. Within that structure, you can use Symfony's built-in tester or Zenstruck's `console-test` package.
 
 ## The Symfony-native approach: `CommandTester`
 
@@ -73,7 +71,7 @@ it('runs the sum command through the full application', function () {
 });
 ```
 
-These are still in-process tests using Symfony's testing utilities, not tests that launch `bin/console` as a separate operating-system process. A missing required argument is validated as an exception in the demo, rather than asserted as a command failure status.
+These are still in-process tests using Symfony's testing utilities, not tests that launch `bin/cli-under-test` as a separate operating-system process. A missing required argument is validated as an exception in the demo, rather than asserted as a command failure status.
 
 ## Which should you choose?
 
