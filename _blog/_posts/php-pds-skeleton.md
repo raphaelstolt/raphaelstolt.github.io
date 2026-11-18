@@ -5,8 +5,6 @@ author: raphaelstolt
 date: '2026-11-18 05:30'
 ---
 
-# pds/skeleton — A standard filesystem structure for PHP packages
-
 The [php-pds/skeleton](https://github.com/php-pds/skeleton) publication defines a standard filesystem skeleton suitable for all PHP packages. It's part of the broader [PHP Package Development Standards](https://php-pds.com) (PDS) initiative, which researches the PHP package ecosystem to recognize and rationalize commonly adopted development practices.
 
 ## The problem
