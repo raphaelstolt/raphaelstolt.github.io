@@ -3,4 +3,3 @@ _blog/node_modules
 _blog/.env
 _blog/_site
 _blog/_media/app.css
-blog/*
