@@ -429,7 +429,7 @@ img {
 .post-content ul,
 .post-content ol {
   margin-bottom: 1.25rem;
-  padding-left: 1.5rem;
+  padding-left: 0;
 }
 
 .post-content li {
