@@ -8,8 +8,9 @@
     <header class="post-header">
         <div class="post-meta">
             @isset($page->category)
-                @foreach(array_map('trim', explode(',', $page->category)) as $cat)
-                    <a href="#" class="post-category-badge">{{ ucfirst($cat) }}</a>
+                @foreach(array_filter(array_map('trim', explode(',', $page->category))) as $cat)
+                    @php($catSlug = \Illuminate\Support\Str::slug(str_replace('/', '-', $cat)))
+                    <a href="{{ Hyde::relativeLink('index.html') }}#category={{ $catSlug }}" class="post-category-badge" data-category-slug="{{ $catSlug }}">{{ ucfirst($cat) }}</a>
                 @endforeach
             @endisset
             @isset($page->date)

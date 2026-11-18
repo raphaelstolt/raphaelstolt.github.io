@@ -1,16 +1,21 @@
-@php /** @var \Hyde\Pages\MarkdownPost $post */ @endphp
-<article class="post-card" itemscope itemtype="https://schema.org/BlogPosting">
+@php
+    /** @var \Hyde\Pages\MarkdownPost $post */
+    $categories = isset($post->category) ? array_filter(array_map('trim', explode(',', $post->category))) : [];
+    $categorySlugs = array_map(fn($c) => \Illuminate\Support\Str::slug(str_replace('/', '-', $c)), $categories);
+@endphp
+<article class="post-card" @if(!empty($categorySlugs)) data-categories="{{ implode(',', $categorySlugs) }}" @endif itemscope itemtype="https://schema.org/BlogPosting">
     <meta itemprop="identifier" content="{{ $post->identifier }}">
     @if($post->getCanonicalUrl())
         <meta itemprop="url" content="{{ $post->getCanonicalUrl()  }}">
     @endif
 
     <div class="post-meta">
-        @isset($post->category)
-            @foreach(array_map('trim', explode(',', $post->category)) as $cat)
-                <span class="post-category-badge">{{ ucfirst($cat) }}</span>
+        @if(!empty($categories))
+            @foreach($categories as $cat)
+                @php($catSlug = \Illuminate\Support\Str::slug(str_replace('/', '-', $cat)))
+                <a href="{{ Hyde::relativeLink('index.html') }}#category={{ $catSlug }}" class="post-category-badge" data-category-slug="{{ $catSlug }}">{{ ucfirst($cat) }}</a>
             @endforeach
-        @endisset
+        @endif
         @isset($post->date)
             <time datetime="{{ $post->date->datetime }}" itemprop="dateCreated datePublished">{{ $post->date->short }}</time>
         @endisset
