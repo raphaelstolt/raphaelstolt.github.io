@@ -5,8 +5,8 @@
 <!-- Site Header -->
 <header class="site-header">
     <div class="container site-header-inner">
-        <a href="{{ url('index.html') }}" class="site-brand">
-            <img src="{{ url('media/images/logo.png') }}" alt="{{ config('hyde.name', 'HydePHP') }}" class="site-brand-avatar">
+        <a href="{{ Hyde::relativeLink('index.html') }}" class="site-brand">
+            <img src="{{ Hyde::relativeLink('media/images/logo.png') }}" alt="{{ config('hyde.name', 'HydePHP') }}" class="site-brand-avatar">
             <span class="site-brand-title">{{ config('hyde.name', 'HydePHP') }}</span>
             <span class="site-brand-badge">Blog</span>
         </a>
