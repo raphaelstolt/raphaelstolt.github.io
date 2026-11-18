@@ -7,7 +7,9 @@
 
     <div class="post-meta">
         @isset($post->category)
-            <span class="post-category">{{ ucfirst($post->category) }}</span>
+            @foreach(array_map('trim', explode(',', $post->category)) as $cat)
+                <span class="post-category-badge">{{ ucfirst($cat) }}</span>
+            @endforeach
         @endisset
         @isset($post->date)
             <time datetime="{{ $post->date->datetime }}" itemprop="dateCreated datePublished">{{ $post->date->short }}</time>

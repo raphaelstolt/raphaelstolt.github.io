@@ -8,7 +8,9 @@
     <header class="post-header">
         <div class="post-meta">
             @isset($page->category)
-                <a href="#" class="post-category">{{ ucfirst($page->category) }}</a>
+                @foreach(array_map('trim', explode(',', $page->category)) as $cat)
+                    <a href="#" class="post-category-badge">{{ ucfirst($cat) }}</a>
+                @endforeach
             @endisset
             @isset($page->date)
                 <time datetime="{{ $page->date->datetime }}" itemprop="dateCreated datePublished">{{ $page->date->format('F j, Y') }}</time>
