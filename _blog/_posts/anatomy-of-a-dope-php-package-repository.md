@@ -7,7 +7,7 @@ date: '2026-11-18 07:45'
 
 A decade ago, back in [September 2016](https://raphaelstolt.blogspot.com/2016/09/anatomy-of-dope-php-package-repository.html), I wrote about the characteristics and anatomy of a dope PHP package repository while contributing to [Construct](https://github.com/jonathantorres/construct) by Jonathan Torres and drawing inspiration from Jonathan Reinink's PHP Package Checklist.
 
-Fast forward to **2026**. The PHP ecosystem has matured dramatically. We are building with PHP 8.3, 8.4, and 8.5, leveraging first-class enums, readonly classes, fiber-based concurrency, property hooks, asymmetric visibility, pattern matching, and comprehensive static type systems. 
+Fast-forward to **2026**. The PHP ecosystem has matured dramatically. We are building with PHP 8.3, 8.4, and 8.5, leveraging first-class enums, readonly classes, fiber-based concurrency, property hooks, asymmetric visibility, pattern matching, and comprehensive static type systems.
 
 Crucially, we have entered the **AI era**. Today, package repositories are no longer consumed solely by human developers; they are continuously indexed, analyzed, tested, and refactored by autonomous AI coding agents, language models, and automated CI bots.
 
