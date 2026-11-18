@@ -9,7 +9,8 @@
             <section class="page-intro">
                 <h1 class="page-intro-title">Articles &amp; Insights</h1>
                 <p class="page-intro-lead">
-                    Writing about polyglot software development, static sites, architecture, and developer productivity.
+                    Exploring developer tooling, package engineering, and software craftsmanship — building better tools,
+                    leaner releases, and smoother developer workflows.
                 </p>
             </section>
 
