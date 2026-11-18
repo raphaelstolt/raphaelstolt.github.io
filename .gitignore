@@ -2,4 +2,5 @@ _blog/vendor
 _blog/node_modules
 _blog/.env
 _blog/_site
-_blog/_media
+_blog/_media/app.css
+blog/*
