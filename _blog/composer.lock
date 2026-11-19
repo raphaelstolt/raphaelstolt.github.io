@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "617332a5471d21bde86789756326320d",
+    "content-hash": "e9b84d5d5d45b44648784e360b9e8d6b",
     "packages": [
         {
             "name": "brick/math",
@@ -4296,6 +4296,66 @@
                 "source": "https://github.com/raphaelstolt/hyde-llms-txt/tree/v0.9.1"
             },
             "time": "2026-11-19T08:28:04+00:00"
+        },
+        {
+            "name": "stolt/hyde-reading-time",
+            "version": "v0.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/raphaelstolt/hyde-reading-time.git",
+                "reference": "42016cbfa958f0b09730628797a9de4c0878d7ea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/raphaelstolt/hyde-reading-time/zipball/42016cbfa958f0b09730628797a9de4c0878d7ea",
+                "reference": "42016cbfa958f0b09730628797a9de4c0878d7ea",
+                "shasum": ""
+            },
+            "require": {
+                "hyde/framework": "^2.0.3",
+                "league/commonmark": "^2.2",
+                "php": "^8.2"
+            },
+            "require-dev": {
+                "carthage-software/mago": "^1.60.2",
+                "phpstan/phpstan": "^2.1",
+                "phpunit/phpunit": "^11.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "HydeReadingTime\\ReadingTimeServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "HydeReadingTime\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Raphael Stolt",
+                    "email": "raphael.stolt@gmail.com"
+                }
+            ],
+            "description": "Estimated Markdown reading times for HydePHP pages.",
+            "keywords": [
+                "Hyde",
+                "hydephp",
+                "hydephp-extension",
+                "reading-time"
+            ],
+            "support": {
+                "issues": "https://github.com/raphaelstolt/hyde-reading-time/issues",
+                "source": "https://github.com/raphaelstolt/hyde-reading-time/tree/v0.9.0"
+            },
+            "time": "2026-11-19T13:42:34+00:00"
         },
         {
             "name": "stolt/llms-txt-php",

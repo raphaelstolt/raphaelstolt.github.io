@@ -424,6 +424,10 @@ img {
   flex-wrap: wrap;
 }
 
+.post-meta > span {
+  color: var(--text-secondary);
+}
+
 .post-category-badge {
   display: inline-block;
   font-size: 0.75rem;

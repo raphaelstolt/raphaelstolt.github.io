@@ -2,6 +2,8 @@
     /** @var \Hyde\Pages\MarkdownPost $post */
     $categories = isset($post->category) ? array_filter(array_map('trim', explode(',', $post->category))) : [];
     $categorySlugs = array_map(fn($c) => \Illuminate\Support\Str::slug(str_replace('/', '-', $c)), $categories);
+    $readingTimeService = app(\HydeReadingTime\ReadingTimeService::class);
+    $readingTime = $readingTimeService->format($readingTimeService->forPage($post));
 @endphp
 <article class="post-card" @if(!empty($categorySlugs)) data-categories="{{ implode(',', $categorySlugs) }}" @endif itemscope itemtype="https://schema.org/BlogPosting">
     <meta itemprop="identifier" content="{{ $post->identifier }}">
@@ -19,6 +21,9 @@
         @isset($post->date)
             <time datetime="{{ $post->date->datetime }}" itemprop="dateCreated datePublished">{{ $post->date->short }}</time>
         @endisset
+        @if($readingTime !== null)
+            <span>{{ $readingTime }}</span>
+        @endif
     </div>
 
     <h2 class="post-card-title" itemprop="headline">
