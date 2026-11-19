@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c642abf5b597c0c4b541e7a7c90c474c",
+    "content-hash": "617332a5471d21bde86789756326320d",
     "packages": [
         {
             "name": "brick/math",
@@ -4235,6 +4235,119 @@
                 }
             ],
             "time": "2025-11-24T16:17:28+00:00"
+        },
+        {
+            "name": "stolt/hyde-llms-txt",
+            "version": "v0.9.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/raphaelstolt/hyde-llms-txt.git",
+                "reference": "bbadbb77c78dc1822005f3b673b317a5f4b169d8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/raphaelstolt/hyde-llms-txt/zipball/bbadbb77c78dc1822005f3b673b317a5f4b169d8",
+                "reference": "bbadbb77c78dc1822005f3b673b317a5f4b169d8",
+                "shasum": ""
+            },
+            "require": {
+                "hyde/framework": "^2.0",
+                "php": "^8.2",
+                "stolt/llms-txt-php": "^4.0"
+            },
+            "require-dev": {
+                "carthage-software/mago": "^1.0",
+                "mockery/mockery": "^1.6",
+                "phpunit/phpunit": "^11.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Stolt\\HydeLlmsTxt\\LlmsTxtServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Stolt\\HydeLlmsTxt\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Raphael Stolt",
+                    "email": "raphael.stolt@gmail.com"
+                }
+            ],
+            "description": "A HydePHP extension that generates an llms.txt file from site content during a static-site build.",
+            "keywords": [
+                "Hyde",
+                "hydephp",
+                "hydephp-extension",
+                "llms-txt",
+                "llms.txt"
+            ],
+            "support": {
+                "issues": "https://github.com/raphaelstolt/hyde-llms-txt/issues",
+                "source": "https://github.com/raphaelstolt/hyde-llms-txt/tree/v0.9.1"
+            },
+            "time": "2026-11-19T08:28:04+00:00"
+        },
+        {
+            "name": "stolt/llms-txt-php",
+            "version": "v4.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/raphaelstolt/llms-txt-php.git",
+                "reference": "67b3e78facd49b3f0669f87e784df96a9ec60142"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/raphaelstolt/llms-txt-php/zipball/67b3e78facd49b3f0669f87e784df96a9ec60142",
+                "reference": "67b3e78facd49b3f0669f87e784df96a9ec60142",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "ext-libxml": "*",
+                "php": "~8.2.0 || ~8.3.0 || ~8.4.0 || ~8.5.0 || ~8.6.0"
+            },
+            "suggest": {
+                "stolt/llms-txt-php-cli": "Allows interaction with a llms.txt file from the console."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Stolt\\LlmsTxt\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Raphael Stolt",
+                    "email": "raphael.stolt@gmail.com"
+                }
+            ],
+            "description": "A library for creating, parsing, validating, discovering, and expanding llms.txt files.",
+            "keywords": [
+                "llms",
+                "llms-txt",
+                "llms.txt",
+                "php",
+                "port"
+            ],
+            "support": {
+                "issues": "https://github.com/raphaelstolt/llms-txt-php/issues",
+                "source": "https://github.com/raphaelstolt/llms-txt-php/tree/v4.3.1"
+            },
+            "time": "2026-09-30T09:17:17+00:00"
         },
         {
             "name": "symfony/clock",
