@@ -446,6 +446,14 @@ img {
   color: var(--text-secondary);
 }
 
+/* Git Commit Hash */
+.git-commit-hash {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-left: auto;
+}
+
 .post-category-badge {
   display: inline-block;
   font-size: 0.75rem;

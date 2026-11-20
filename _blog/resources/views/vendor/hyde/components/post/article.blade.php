@@ -17,6 +17,13 @@
                 <time datetime="{{ $page->date->datetime }}" itemprop="dateCreated datePublished">{{ $page->date->format('F j, Y') }}</time>
             @endisset
             <span>@readingTime</span>
+            <?php
+                $gitMeta = app(\HydeGitMeta\GitMetaPageService::class);
+                $gitShortSha = $gitMeta->shortSha($page);
+            ?>
+            @if($gitShortSha)
+                <span class="git-commit-hash">{{ $gitShortSha }}</span>
+            @endif
         </div>
 
         <h1 class="post-title" itemprop="headline">{{ $page->title }}</h1>

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e9b84d5d5d45b44648784e360b9e8d6b",
+    "content-hash": "7d37654a49bf1ef466a366e333b7ae8b",
     "packages": [
         {
             "name": "brick/math",
@@ -4237,6 +4237,69 @@
             "time": "2025-11-24T16:17:28+00:00"
         },
         {
+            "name": "stolt/hyde-git-meta",
+            "version": "v0.9.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/raphaelstolt/hyde-git-meta.git",
+                "reference": "5ff89af4ce93991d9402f9f461af07249e9bebb5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/raphaelstolt/hyde-git-meta/zipball/5ff89af4ce93991d9402f9f461af07249e9bebb5",
+                "reference": "5ff89af4ce93991d9402f9f461af07249e9bebb5",
+                "shasum": ""
+            },
+            "require": {
+                "hyde/framework": "^2.0.3",
+                "php": "^8.2",
+                "symfony/process": "^6.4|^7.0"
+            },
+            "require-dev": {
+                "carthage-software/mago": "^1.60.2",
+                "phpstan/phpstan": "^2.1",
+                "phpunit/phpunit": "^11.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "HydeGitMeta\\GitMetaServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "HydeGitMeta\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Raphael Stolt",
+                    "email": "raphael.stolt@gmail.com"
+                }
+            ],
+            "description": "Git commit metadata for HydePHP pages and posts at build time.",
+            "keywords": [
+                "Hyde",
+                "commit",
+                "git",
+                "git-meta",
+                "hydephp",
+                "hydephp-extension"
+            ],
+            "support": {
+                "issues": "https://github.com/raphaelstolt/hyde-git-meta/issues",
+                "source": "https://github.com/raphaelstolt/hyde-git-meta/tree/v0.9.1"
+            },
+            "time": "2026-11-20T04:44:38+00:00",
+            "published-time": "2026-11-20T04:45:17+00:00"
+        },
+        {
             "name": "stolt/hyde-llms-txt",
             "version": "v0.9.1",
             "source": {
@@ -6959,5 +7022,5 @@
         "php": "^8.2"
     },
     "platform-dev": {},
-    "plugin-api-version": "2.9.0"
+    "plugin-api-version": "2.11.0"
 }

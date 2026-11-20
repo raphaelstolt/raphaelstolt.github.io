@@ -27,6 +27,7 @@
         "php": "^8.2",
         "hyde/framework": "^2.0",
         "laravel-zero/framework": "^11.0",
+        "stolt/hyde-git-meta": "^0.9.1",
         "stolt/hyde-llms-txt": "^0.9.0",
         "stolt/hyde-reading-time": "^0.9.0"
     },

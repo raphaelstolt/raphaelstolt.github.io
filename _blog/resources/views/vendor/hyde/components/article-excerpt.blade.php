@@ -4,6 +4,7 @@
     $categorySlugs = array_map(fn($c) => \Illuminate\Support\Str::slug(str_replace('/', '-', $c)), $categories);
     $readingTimeService = app(\HydeReadingTime\ReadingTimeService::class);
     $readingTime = $readingTimeService->format($readingTimeService->forPage($post));
+    $gitShortSha = app(\HydeGitMeta\GitMetaPageService::class)->shortSha($post);
 @endphp
 <article class="post-card" @if(!empty($categorySlugs)) data-categories="{{ implode(',', $categorySlugs) }}" @endif itemscope itemtype="https://schema.org/BlogPosting">
     <meta itemprop="identifier" content="{{ $post->identifier }}">
@@ -23,6 +24,9 @@
         @endisset
         @if($readingTime !== null)
             <span>{{ $readingTime }}</span>
+        @endif
+        @if($gitShortSha)
+            <span class="git-commit-hash">{{ $gitShortSha }}</span>
         @endif
     </div>
 
