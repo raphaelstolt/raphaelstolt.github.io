@@ -1,6 +1,6 @@
 ---
 title: 'Your CLI deserves better tests'
-category: php, symfony/console, phpunit, zenstruck
+category: php, symfony/console, zenstruck
 author: raphaelstolt
 date: '2026-11-18 12:10'
 ---
