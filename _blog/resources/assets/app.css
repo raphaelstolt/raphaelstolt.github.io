@@ -902,6 +902,10 @@ img {
     font-size: 0.8125rem;
   }
 
+  .post-category-badge:nth-child(odd) {
+    display: none;
+  }
+
   /* Single post */
   .post-article {
     padding: 1.25rem 1rem;
@@ -1014,6 +1018,10 @@ img {
 
   .site-nav a:not(.github-link):not(.theme-toggle-btn) {
     font-size: 0.75rem;
+  }
+
+  .post-category-badge:nth-child(odd) {
+    display: none;
   }
 }
 
