@@ -758,27 +758,262 @@ img {
   color: var(--accent);
 }
 
-/* Responsive adjustments */
-@media (max-width: 640px) {
-  .site-main {
-    padding-top: 2rem;
-    padding-bottom: 3rem;
+/* ==========================================================================
+   Responsive Adjustments
+   ========================================================================== */
+
+/* Tablet and below */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
+
+  .page-intro-title {
+    font-size: 1.875rem;
+  }
+
+  .post-title {
+    font-size: 1.875rem;
+  }
+
+  .post-card-title {
+    font-size: 1.25rem;
+  }
+
+  .post-article {
+    padding: 2rem 1.5rem;
+  }
+
+  .post-content h2 {
+    font-size: 1.375rem;
+  }
+
+  .post-content h3 {
+    font-size: 1.125rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Header adjustments */
+  .site-header-inner {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .site-brand {
+    gap: 0.5rem;
+  }
+
+  .site-brand-avatar {
+    width: 30px;
+    height: 30px;
+  }
+
+  .site-brand-title {
+    font-size: 1rem;
+  }
+
+  .site-brand-badge {
+    display: none;
+  }
+
+  .site-nav {
+    gap: 0.75rem;
+    margin-left: auto;
+  }
+
+  .site-nav a:not(.github-link):not(.theme-toggle-btn) {
+    font-size: 0.8125rem;
+  }
+
+  .github-link {
+    width: 32px;
+    height: 32px;
+    margin-left: 0.25rem;
+  }
+
+  .github-link svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .theme-toggle-btn {
+    padding: 0.3rem;
+  }
+
+  /* Main content */
+  .site-main {
+    padding-top: 1.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  /* Page intro */
+  .page-intro {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+  }
+
   .page-intro-title,
   .post-title {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
-  .post-article {
-    padding: 1.5rem 1.25rem;
+
+  .page-intro-lead {
+    font-size: 1rem;
   }
+
+  /* Post cards */
+  .post-list {
+    gap: 1.25rem;
+  }
+
   .post-card {
     padding: 1.25rem;
   }
+
+  .post-card-title {
+    font-size: 1.125rem;
+  }
+
+  .post-card-excerpt {
+    font-size: 0.9rem;
+  }
+
+  .post-meta {
+    font-size: 0.8125rem;
+  }
+
+  /* Single post */
+  .post-article {
+    padding: 1.25rem 1rem;
+    border-radius: var(--radius-sm);
+  }
+
+  .post-header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.25rem;
+  }
+
+  .post-author-box {
+    gap: 0.5rem;
+  }
+
+  .post-author-img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .post-content {
+    font-size: 1rem;
+  }
+
+  .post-content h2 {
+    font-size: 1.25rem;
+    margin-top: 1.75rem;
+  }
+
+  .post-content h3 {
+    font-size: 1.125rem;
+  }
+
+  .post-content pre {
+    padding: 1rem;
+    font-size: 0.8125rem;
+    border-radius: var(--radius-sm);
+  }
+
+  .post-content blockquote {
+    padding: 0.75rem 1rem;
+    margin: 1.25rem 0;
+  }
+
+  /* Category filter */
+  .category-filter-nav {
+    margin-bottom: 1.5rem;
+  }
+
+  .category-pill {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.65rem;
+  }
+
+  /* Post navigation */
   .post-nav-links {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
+
+  .post-nav-card {
+    padding: 1rem;
+  }
+
+  /* Footer */
+  .site-footer {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    font-size: 0.8125rem;
+  }
+
   .site-footer-inner {
     flex-direction: column;
     align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .site-footer-links {
+    gap: 1rem;
+  }
+}
+
+/* Very small screens (e.g. iPhone SE) */
+@media (max-width: 390px) {
+  .container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .site-brand-title {
+    font-size: 0.9375rem;
+  }
+
+  .page-intro-title,
+  .post-title {
+    font-size: 1.375rem;
+  }
+
+  .post-card {
+    padding: 1rem;
+  }
+
+  .post-article {
+    padding: 1rem 0.75rem;
+  }
+
+  .post-content {
+    font-size: 0.9375rem;
+  }
+
+  .site-nav a:not(.github-link):not(.theme-toggle-btn) {
+    font-size: 0.75rem;
+  }
+}
+
+/* Ensure horizontal scroll for code blocks on mobile */
+@media (max-width: 640px) {
+  .post-content pre {
+    margin-left: calc(-1 * var(--container-padding, 1rem));
+    margin-right: calc(-1 * var(--container-padding, 1rem));
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
   }
 }
