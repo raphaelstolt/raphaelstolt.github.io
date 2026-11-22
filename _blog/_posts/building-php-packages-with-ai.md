@@ -1,6 +1,6 @@
 ---
 title: 'Building PHP Packages with AI: Prompts, Tests, and Quality Gates'
-category: php, ai, open-source
+category: php, ai, oss
 author: raphaelstolt
 date: '2026-11-19 01:00'
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Gather requirements in a PROMPTS.md"
-category: open-source, workflow, ai
+category: oss, workflow, ai
 author: raphaelstolt
 date: '2026-11-19 03:00'
 ---

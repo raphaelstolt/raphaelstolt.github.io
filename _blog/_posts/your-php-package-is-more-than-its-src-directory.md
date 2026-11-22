@@ -1,6 +1,6 @@
 ---
 title: 'Your PHP package is more than its src/ directory'
-category: php, open-source, opinion
+category: php, oss, opinion
 author: raphaelstolt
 date: '2026-11-19 00:48'
 ---

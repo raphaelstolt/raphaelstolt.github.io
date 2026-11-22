@@ -1,6 +1,6 @@
 ---
 title: 'Introducing lean-packages — Lean distributions across ecosystems'
-category: open-source, packaging
+category: oss, packaging
 author: raphaelstolt
 date: '2026-11-17 22:00'
 ---

@@ -1,6 +1,6 @@
 ---
 title: 'Anatomy of a dope PHP package repository'
-category: open-source, php, packaging, ai
+category: oss, php, packaging, ai
 author: raphaelstolt
 date: '2026-11-18 07:45'
 ---

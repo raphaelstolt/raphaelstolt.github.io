@@ -1,6 +1,6 @@
 ---
 title: 'Building a Reading-Time Extension for HydePHP'
-category: php, open-source, hydephp
+category: php, oss, hydephp
 author: raphaelstolt
 date: '2026-11-19 20:19'
 ---

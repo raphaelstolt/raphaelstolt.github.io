@@ -1,6 +1,6 @@
 ---
 title: "Configuration is code. Why don't we treat it that way?"
-category: php, configuration, open-source
+category: php, configuration, oss
 author: raphaelstolt
 date: '2026-11-18 11:59'
 ---

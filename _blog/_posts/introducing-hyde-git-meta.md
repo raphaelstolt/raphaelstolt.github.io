@@ -1,6 +1,6 @@
 ---
 title: 'Introducing hyde-git-meta — Git commit metadata for HydePHP'
-category: open-source, hydephp, php
+category: oss, hydephp, php
 author: raphaelstolt
 date: '2026-11-21 09:00'
 ---

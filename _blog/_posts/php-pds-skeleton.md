@@ -1,6 +1,6 @@
 ---
 title: 'pds/skeleton — A standard filesystem structure for PHP packages'
-category: open-source, php, standards
+category: oss, php, standards
 author: raphaelstolt
 date: '2026-11-18 05:30'
 ---

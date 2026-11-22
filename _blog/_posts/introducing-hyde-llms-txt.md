@@ -1,6 +1,6 @@
 ---
 title: 'Introducing hyde-llms-txt'
-category: php, open-source, tooling, hydephp
+category: php, oss, tooling, hydephp
 author: raphaelstolt
 date: '2026-11-19 11:30'
 ---

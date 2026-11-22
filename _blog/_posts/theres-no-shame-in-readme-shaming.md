@@ -1,6 +1,6 @@
 ---
 title: "There's no shame in README.md shaming"
-category: open-source, opinion, documentation
+category: oss, opinion, documentation
 author: raphaelstolt
 date: '2026-11-19 02:00'
 ---
