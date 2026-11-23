@@ -806,6 +806,10 @@ img {
 
 /* Mobile */
 @media (max-width: 640px) {
+  .reading-time {
+    display: none;
+  }
+
   .container {
     padding-left: 1rem;
     padding-right: 1rem;

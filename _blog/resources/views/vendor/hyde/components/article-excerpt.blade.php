@@ -23,7 +23,7 @@
             <time datetime="{{ $post->date->datetime }}" itemprop="dateCreated datePublished">{{ $post->date->short }}</time>
         @endisset
         @if($readingTime !== null)
-            <span>{{ $readingTime }}</span>
+            <span class="reading-time">{{ $readingTime }}</span>
         @endif
         @if($gitShortSha)
             <span class="git-commit-hash">{{ $gitShortSha }}</span>

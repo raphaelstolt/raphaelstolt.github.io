@@ -17,7 +17,7 @@
                 @isset($page->date)
                     <time datetime="{{ $page->date->datetime }}" itemprop="dateCreated datePublished">{{ $page->date->format('F j, Y') }}</time>
                 @endisset
-                <span>@readingTime</span>
+                <span class="reading-time">@readingTime</span>
             </span>
             <?php
                 $gitMeta = app(\HydeGitMeta\GitMetaPageService::class);
